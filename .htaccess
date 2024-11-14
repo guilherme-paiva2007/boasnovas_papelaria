@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# RewriteRule ^([^\.]+)$ $1.php
+
+RewriteRule ^inicio(\.php)?$ index.php
+RewriteRule ^perfil$ perfil.php
+RewriteRule ^carrinho$ carrinho.php
+RewriteRule ^(pesquisa|pesquisar)$ pesquisar.php
+RewriteRule ^produto$ produto.php
+RewriteRule ^lista$ lista_desejos.php
+RewriteRule ^admin/usuarios$ admin_usuarios.php
+RewriteRule ^admin/produtos$ admin_produtos.php
+RewriteRule ^admin/promocoes$ admin_promocoes.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]

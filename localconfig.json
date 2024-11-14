@@ -1,10 +1,10 @@
 {
-    "host": "localhost",
     "base_dir": "/boasnovas_papelaria",
+    "host": "localhost",
     "connection": {
         "hostname": "localhost",
         "username": "root",
         "password": "",
-        "database": "boasnovas_papelaria"
+        "database": "boasnovas_db"
     }
 }
