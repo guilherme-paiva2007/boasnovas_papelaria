@@ -9,3 +9,5 @@
         if (hrefNGet.endsWith('.php')) location.href = hrefNGet.slice(0, -4) + get;
     }
 }
+
+history.replaceState(null, null, location.href);

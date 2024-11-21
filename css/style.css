@@ -1,0 +1,62 @@
+@import url('./themes.css');
+
+:root {
+    font-size: 16px;
+    --input-radius: 4px;
+    --input-padding: 0.3rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 2fr 6fr 4fr;
+    gap: 4rem;
+    background-color: var(--bn_orange);
+    padding: 1rem;
+    &, & a {
+        color: white;
+    }
+}
+
+header #header-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo {
+    width: 4rem;
+}
+
+header #header-search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    & form {
+        width: 100%;
+        & input {
+            width: 100%;
+        }
+    }
+}
+
+header #header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    border-radius: var(--input-radius);
+    padding: var(--input-padding);
+}

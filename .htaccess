@@ -2,16 +2,24 @@ RewriteEngine On
 
 # RewriteRule ^([^\.]+)$ $1.php
 
-RewriteRule ^inicio(\.php)?$ index.php
-RewriteRule ^perfil$ perfil.php
-RewriteRule ^carrinho$ carrinho.php
-RewriteRule ^(pesquisa|pesquisar)$ pesquisar.php
-RewriteRule ^produto$ produto.php
-RewriteRule ^lista$ lista_desejos.php
-RewriteRule ^admin/usuarios$ admin_usuarios.php
-RewriteRule ^admin/produtos$ admin_produtos.php
-RewriteRule ^admin/promocoes$ admin_promocoes.php
+RewriteRule ^inicio(\.php)?/?$ index.php
+RewriteRule ^perfil/?$ perfil.php
+RewriteRule ^carrinho/?$ carrinho.php
+RewriteRule ^(pesquisa|pesquisar)/?$ pesquisar.php
+RewriteRule ^produto/?$ produto.php
+RewriteRule ^lista/?$ lista_desejos.php
+RewriteRule ^admin/?$ admin.php
+RewriteRule ^admin/usuarios/?$ admin_usuarios.php
+RewriteRule ^admin/produtos/?$ admin_produtos.php [L]
+RewriteRule ^admin/promocoes/?$ admin_promocoes.php [L]
+
+RewriteRule ^admin/produtos/([0-9]+)$ admin_produtos_info.php?id_produto=$1 [L]
+RewriteRule ^admin/usuarios/([0-9]+)$ admin_usuarios_info.php?id_usuario=$1 [L]
+RewriteRule ^admin/promocoes/([0-9]+)$ admin_promocoes_info.php?id_promocao=$1 [L]
+
+RewriteRule ^js/import$ js/import.php
+RewriteRule ^css/style$ css/style.css
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [L]
+RewriteRule ^(.*)$ 404.php [L]
