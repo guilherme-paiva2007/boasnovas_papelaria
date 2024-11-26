@@ -2,8 +2,8 @@
 
 :root {
     font-size: 16px;
-    --input-radius: 4px;
-    --input-padding: 0.3rem;
+    --radius: 4px;
+    --padding: 5px;
 }
 
 * {
@@ -60,9 +60,21 @@ header {
     }
 }
 
+/* Containers */
+
+/* div, section, article, span {} */
+
 input {
     border: 0;
     outline: 0;
     border-radius: var(--input-radius);
     padding: var(--input-padding);
 }
+
+/* Text Tags */
+
+/* h1, h2, h3, h4, h5, h6 {}
+
+p, li {}
+
+span, q */
