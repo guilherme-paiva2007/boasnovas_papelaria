@@ -1,13 +1,20 @@
 <?php
-$dir_level = 1;
+$connected = true;
 
-if (!isset($setup)) include './setup.php';
+if (!isset($scripts) && $scripts === true) include 'script.php';
 
-$connection_config = $localconfig['connection'];
+$connectionconfig = include 'connectionconfig.php';
 
 $connection = new mysqli(
-    $connection_config['hostname'],
-    $connection_config['username'],
-    $connection_config['password'],
-    $connection_config['database']
+    $connectionconfig['hostname'],
+    $connectionconfig['username'],
+    $connectionconfig['password'],
+    $connectionconfig['database']
 );
+
+if ($connection->connect_error) {
+    $connected = false;
+    die('Connection failed: ' . $connection->connect_error);
+}
+
+unset($connectionconfig);

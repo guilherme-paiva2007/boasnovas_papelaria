@@ -12,7 +12,13 @@
 
 body {
     margin: 0;
+
+    &.fullpage {
+        height: 100vh;
+        overflow-y: hidden;
+    }
 }
+
 
 header {
     display: grid;
@@ -20,38 +26,38 @@ header {
     gap: 4rem;
     background-color: var(--bn_orange);
     padding: 1rem;
-    &, & a {
+    &, a {
         color: white;
     }
-}
+    
+    .logo {
+        width: 4rem;
+    }
 
-header #header-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    #header-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-header .logo {
-    width: 4rem;
-}
-
-header #header-search {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    & form {
+    #header-search {
         width: 100%;
-        & input {
+        display: flex;
+        align-items: center;
+        form {
             width: 100%;
+            input {
+                width: 100%;
+            }
         }
     }
-}
 
-header #header-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.2rem;
+    #header-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.2rem;
+    }
 }
 
 input {

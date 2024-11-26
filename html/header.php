@@ -1,6 +1,6 @@
 <header>
-    <a href="<?= generateLink('/inicio') ?>" id="header-logo">
-        <img src="<?= generateLink('/img/logo.png') ?>" alt="Logo de Marca: Boas Novas" class="logo">
+    <a href="<?= createLink('/inicio') ?>" id="header-logo">
+        <img src="<?= createLink('/img/logo.png') ?>" alt="Logo de Marca: Boas Novas" class="logo">
     </a>
     <div id="header-search">
         <form action="./pesquisar" method="get">

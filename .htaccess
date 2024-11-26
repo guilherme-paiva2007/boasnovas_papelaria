@@ -1,24 +1,23 @@
 RewriteEngine On
 
-# RewriteRule ^([^\.]+)$ $1.php
-
-RewriteRule ^inicio(\.php)?/?$ index.php
-RewriteRule ^perfil/?$ perfil.php
-RewriteRule ^carrinho/?$ carrinho.php
-RewriteRule ^(pesquisa|pesquisar)/?$ pesquisar.php
-RewriteRule ^produto/?$ produto.php
-RewriteRule ^lista/?$ lista_desejos.php
-RewriteRule ^admin/?$ admin.php
-RewriteRule ^admin/usuarios/?$ admin_usuarios.php
+RewriteRule ^inicio(\.php)?/?$ index.php [L]
+RewriteRule ^perfil/?$ perfil.php [L]
+RewriteRule ^carrinho/?$ carrinho.php [L]
+RewriteRule ^(pesquisa|pesquisar)/?$ pesquisar.php [L]
+RewriteRule ^produto/?$ produto.php [L]
+RewriteRule ^lista/?$ lista_desejos.php [L]
+RewriteRule ^admin/?$ admin.php [L]
+RewriteRule ^admin/usuarios/?$ admin_usuarios.php [L]
 RewriteRule ^admin/produtos/?$ admin_produtos.php [L]
 RewriteRule ^admin/promocoes/?$ admin_promocoes.php [L]
 
-RewriteRule ^admin/produtos/([0-9]+)$ admin_produtos_info.php?id_produto=$1 [L]
-RewriteRule ^admin/usuarios/([0-9]+)$ admin_usuarios_info.php?id_usuario=$1 [L]
-RewriteRule ^admin/promocoes/([0-9]+)$ admin_promocoes_info.php?id_promocao=$1 [L]
+RewriteRule ^produto/([0-9]+)$ produto_info.php?id=$1 [L]
+RewriteRule ^admin/produtos/([0-9]+)$ admin_produtos_info.php?id=$1 [L]
+RewriteRule ^admin/usuarios/([0-9]+)$ admin_usuarios_info.php?id=$1 [L]
+RewriteRule ^admin/promocoes/([0-9]+)$ admin_promocoes_info.php?id=$1 [L]
 
-RewriteRule ^js/import$ js/import.php
-RewriteRule ^css/style$ css/style.css
+RewriteRule ^js/import$ js/import.php [L]
+RewriteRule ^css/style$ css/style.css [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

@@ -1,3 +1,4 @@
 debug.html
-localconfig.json
+localconfig.php
+connectionconfig.php
 css/themeCompiler.*
