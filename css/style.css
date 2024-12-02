@@ -4,6 +4,7 @@
     font-size: 16px;
     --radius: 4px;
     --padding: 5px;
+    --font: var(--reverse);
 }
 
 * {
@@ -12,6 +13,7 @@
 
 body {
     margin: 0;
+    background-color: var(--base);
 
     &.fullpage {
         height: 100vh;
@@ -24,7 +26,7 @@ header {
     display: grid;
     grid-template-columns: 2fr 6fr 4fr;
     gap: 4rem;
-    background-color: var(--bn_orange);
+    background-color: var(--main);
     padding: 1rem;
     &, a {
         color: white;
@@ -48,6 +50,8 @@ header {
             width: 100%;
             input {
                 width: 100%;
+                padding: 6px;
+                border-radius: 6px;
             }
         }
     }
@@ -67,8 +71,8 @@ header {
 input {
     border: 0;
     outline: 0;
-    border-radius: var(--input-radius);
-    padding: var(--input-padding);
+    border-radius: 4px;
+    padding: 4px;
 }
 
 /* Text Tags */

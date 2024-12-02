@@ -1,7 +1,7 @@
-<?php
+<?php #include
 $connected = true;
 
-if (!isset($scripts) && $scripts === true) include 'script.php';
+if (!isset($scripts)) include 'script.php';
 
 $connectionconfig = include 'connectionconfig.php';
 

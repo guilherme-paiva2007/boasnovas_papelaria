@@ -1,5 +1,6 @@
-<?php
+<?php #include
 $setup = true;
 
-include 'script.php';
+if (!isset($scripts)) include 'script.php';
+
 session_start();
